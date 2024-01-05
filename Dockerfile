@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends apache2 icinga nagios-plugins nagios-nrpe-plugin curl ca-certificates python && \
+    apt-get install -y --no-install-recommends apache2 icinga nagios-plugins nagios-nrpe-plugin curl ca-certificates python3 && \
     rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 RUN FOREGO_URL="https://github.com/viranch/forego/releases/download/20211019/forego-linux-amd64.tgz"; \
